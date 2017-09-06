@@ -9,6 +9,7 @@ ancestry_path = ".%sancestries%s%s%s%s_%s.json"
 profession_path = ".%sprofessions%s%s.json"
 profession_type = random.choice([
     "academic", "common", "criminal", "martial", "religious", "wilderness"])
+personality_path = ".%spersonality_traits%s%s_personality_traits.json"
 
 
 class Generator():
@@ -31,3 +32,13 @@ class Generator():
             profession_list = character_file.json_file(profession_path % (
                 "\\", "\\", profession_type))
         return(profession_list)
+
+    @classmethod
+    def personality_info(self, personality_type):
+        if os.name == "posix":
+            personality_list = character_file.json_file(personality_path % (
+                "/", "/", personality_type))
+        else:
+            personality_list = character_file.json_file(personality_path % (
+                "\\", "\\", personality_type))
+        return(personality_list)

@@ -49,3 +49,11 @@ class Character(object):
 
     def generate_profession(self, roll):
         self.char_profession = generate.profession_info()[roll]
+
+    def generate_personality(self, roll_a, roll_b, roll_c):
+        self.char_pos_personality_trait_a = generate.personality_info(
+            "positive")[roll_a]
+        self.char_pos_personality_trait_b = generate.personality_info(
+            "positive")[roll_b]
+        self.char_neg_personality_trait = generate.personality_info(
+            "negative")[roll_c]
