@@ -46,3 +46,6 @@ class Character(object):
         attribute_name = "self.char_" + info
         exec(attribute_name + """ = generate.ancestry_info(
             self.char_ancestry, info)[roll]""")
+
+    def generate_profession(self, roll):
+        self.char_profession = generate.profession_info()[roll]
