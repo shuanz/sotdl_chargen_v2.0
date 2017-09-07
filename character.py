@@ -10,8 +10,9 @@ class Character(object):
                 char_strength, char_intellect, char_agility, char_will,
                 char_health, char_size, char_speed, char_power, char_damage,
                 char_insanity, char_corruption, char_languages,
-                char_interesting_thing, char_pos_personality_trait_a,
-                char_pos_personality_trait_b, char_neg_personality_trait):
+                char_interesting_things, char_pos_personality_trait_a,
+                char_pos_personality_trait_b, char_neg_personality_trait,
+                char_wealth):
         self.char_name = char_name
         self.char_ancestry = char_ancestry
         self.char_level = char_level
@@ -32,10 +33,11 @@ class Character(object):
         self.char_insanity = char_insanity
         self.char_corruption = char_corruption
         self.char_languages = char_languages
-        self.char_interesting_thing = char_interesting_thing
+        self.char_interesting_things = char_interesting_things
         self.char_pos_personality_trait_a = char_pos_personality_trait_a
         self.char_pos_personality_trait_b - char_pos_personality_trait_b
         self.char_neg_personality_trait = char_neg_personality_trait
+        self.char_wealth = char_wealth
 
     def generate_name(self):
         info = "names"
@@ -57,3 +59,11 @@ class Character(object):
             "positive")[roll_b]
         self.char_neg_personality_trait = generate.personality_info(
             "negative")[roll_c]
+
+    def generate_interesting_things(self, roll_a, roll_b):
+        self.char_interesting_things = generate.interesting_things_info(
+            roll_a)[roll_b]
+        print(roll_a + "&" + roll_b)
+
+    def generate_wealth(self, roll):
+        self.char_wealth = generate.wealth_info()[roll]

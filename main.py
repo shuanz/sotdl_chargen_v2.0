@@ -1,27 +1,25 @@
+# -*- coding: utf-8 -*-
 from human import Human
+from changeling import Changeling
+from clockwork import Clockwork
 from roll import Roll
+from printer import Printer
+import random
 
-
-character = Human(None, None)
+character = random.choice([Human(), Changeling(), Clockwork()])
 character.generate_name()
-character.generate_info("age", Roll.a_dice("3d6"))
-character.generate_info("build", Roll.a_dice("3d6"))
-character.generate_info("appearence", Roll.a_dice("3d6"))
+character.char_level = 0
 character.generate_info("background", Roll.a_dice("1d20"))
 character.generate_info("personality", Roll.a_dice("3d6"))
-character.generate_info("religion", Roll.a_dice("3d6"))
 character.generate_profession(Roll.a_dice("1d20"))
 character.generate_personality(
     Roll.a_dice("1d20"), Roll.a_dice("1d20"), Roll.a_dice("1d20"))
-print(character.char_name)
-print(character.char_ancestry)
-print(character.char_age)
-print(character.char_build)
-print(character.char_appearence)
-print(character.char_background)
-print(character.char_personality)
-print(character.char_religion)
-print(character.char_profession)
-print(character.char_pos_personality_trait_a)
-print(character.char_pos_personality_trait_b)
-print(character.char_neg_personality_trait)
+character.generate_interesting_things(Roll.a_dice("1d6"), Roll.a_dice("1d20"))
+character.generate_wealth(Roll.a_dice("3d6"))
+Printer.print_common_info(character)
+character.generate_extra_info(character, True)
+
+# to-dos
+# generate seed database
+# generate pdf cheet
+# create last ancestry objects
