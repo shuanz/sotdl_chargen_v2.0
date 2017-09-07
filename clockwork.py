@@ -11,13 +11,16 @@ class Clockwork(Character):
         self.char_intellect = 9
         self.char_will = 9
         self.char_health = self.char_strength
+        self.char_healing_rate = round(self.char_health/4, 0)
+        self.char_perception = self.char_intellect
+        self.char_defense = 13
         self.char_size = "1"
-        self.char_speed = self.char_agility
+        self.char_speed = 8
         self.char_power = 0
         self.char_damage = 0
         self.char_insanity = 0
         self.char_corruption = 0
-        self.char_languages = "Common Tongue"
+        self.char_languages = "You speak Common Tongue"
 
     def generate_extra_info(self, char, print_extra_info):
         char.generate_info("form", Roll.a_dice("3d6"))

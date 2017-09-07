@@ -12,7 +12,7 @@ class Character(object):
                 char_insanity, char_corruption, char_languages,
                 char_interesting_things, char_pos_personality_trait_a,
                 char_pos_personality_trait_b, char_neg_personality_trait,
-                char_wealth):
+                char_wealth, char_perception, char_defense, char_healing_rate):
         self.char_name = char_name
         self.char_ancestry = char_ancestry
         self.char_level = char_level
@@ -38,6 +38,9 @@ class Character(object):
         self.char_pos_personality_trait_b - char_pos_personality_trait_b
         self.char_neg_personality_trait = char_neg_personality_trait
         self.char_wealth = char_wealth
+        self.char_perception = char_perception
+        self.char_defense = char_defense
+        self.char_healing_rate = char_healing_rate
 
     def generate_name(self):
         info = "names"

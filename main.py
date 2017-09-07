@@ -2,11 +2,15 @@
 from human import Human
 from changeling import Changeling
 from clockwork import Clockwork
+from dwarf import Dwarf
+from goblin import Goblin
+from orc import Orc
 from roll import Roll
 from printer import Printer
 import random
 
-character = random.choice([Human(), Changeling(), Clockwork()])
+character = random.choice(
+    [Human(), Changeling(), Clockwork(), Dwarf(), Goblin(), Orc()])
 character.generate_name()
 character.char_level = 0
 character.generate_info("background", Roll.a_dice("1d20"))
@@ -20,6 +24,6 @@ Printer.print_common_info(character)
 character.generate_extra_info(character, True)
 
 # to-dos
-# generate seed database
-# generate pdf cheet
-# create last ancestry objects
+# add seed database generator
+# add pdf cheet generator
+# add descriptions

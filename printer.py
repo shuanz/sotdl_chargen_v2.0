@@ -16,11 +16,14 @@ class Printer():
             "Attributes: " + "Strength:" + str(character.char_strength),
             "Agility:" + str(character.char_agility) + " Intelect:" +
             str(character.char_intellect) + " Will:" + str(character.char_will)
-            + " Health:" + str(character.char_health) + " Speed:" +
-            str(character.char_speed) + " Power:" + str(character.char_power) +
-            " Damage:" + str(character.char_damage) + " Insanity:" +
-            str(character.char_insanity) + " Corruption:" +
-            str(character.char_corruption))
+            + " Health:" + str(character.char_health) +
+            " Healing Rate:" + str(int(character.char_healing_rate)) +
+            " Speed:" + str(character.char_speed) + " Power:" +
+            str(character.char_power) + " Damage:" + str(character.char_damage)
+            + " Insanity:" + str(character.char_insanity) + " Corruption:" +
+            str(character.char_corruption) + " Perception:" +
+            str(character.char_perception) + " Defense:" +
+            str(character.char_defense))
         print(
             "Positives Personality Traits: " +
             character.char_pos_personality_trait_a + " & " +
