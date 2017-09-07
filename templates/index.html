@@ -1,10 +1,79 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
+
+<!-- saved from url=(0088)https://www.pdf.investintech.com/preview/65374b76-9375-11e7-8b44-002590d31986/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+span.cls_002{font-family:"Candara",serif;font-size:12.1px;color:rgb(43,42,41);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_002{font-family:"Candara",serif;font-size:12.1px;color:rgb(43,42,41);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_005{font-family:"Candara",serif;font-size:10.6px;color:rgb(36,36,34);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_005{font-family:"Candara",serif;font-size:10.6px;color:rgb(36,36,34);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_006{font-family:"Candara",serif;font-size:6.7px;color:rgb(43,42,41);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_006{font-family:"Candara",serif;font-size:6.7px;color:rgb(43,42,41);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_004{font-family:"Candara",serif;font-size:10.6px;color:rgb(36,36,34);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_004{font-family:"Candara",serif;font-size:10.6px;color:rgb(36,36,34);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_007{font-family:"Candara",serif;font-size:9.6px;color:rgb(36,36,34);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_007{font-family:"Candara",serif;font-size:9.6px;color:rgb(36,36,34);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_008{font-family:"Candara",serif;font-size:15.6px;color:rgb(36,36,34);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_008{font-family:"Candara",serif;font-size:15.6px;color:rgb(36,36,34);font-weight:normal;font-style:normal;text-decoration: none}
+input[type="text"]
+{
+    background: transparent;
+    border: none;
+    font-style: italic;
+    font-family:"Candara",serif;
+    font-size:12.1px;
+}
+#textarea1 {
+  background: transparent;
+  color: black;
+  resize: none;
+  border: 0 none;
+  outline: none;
+  position: absolute;
+  font-style: italic;
+  font-family:"Candara",serif;
+  font-size:9.0px;
+  width:192px;
+  height: 140;
+}
+#textarea2 {
+  background: transparent;
+  color: black;
+  resize: none;
+  border: 0 none;
+  outline: none;
+  position: absolute;
+  font-style: italic;
+  font-family:"Candara",serif;
+  font-size:12.1px;
+  width:192px;
+  height: 20;
+}
+-->
+</style>
+<script type="text/javascript" src="/static/js/wz_jsgraphics.js"></script>
 </head>
-<title>SOTDL CHARGEN V2.0</title>
 <body>
-  <p>{{character.char_name}}</p>
-</body>
-</html>
+<div style="position:absolute;left:50%;margin-left:-306px;top:0px;width:612px;height:792px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="/static/img/background2.jpg" width="612" height="792"></div>
+<div style="position:absolute;left:400.61px;top:32.13px" class="cls_002"><input type="text" value={{character.char_profession}}><br></span></div>
+<div style="position:absolute;left:18.58px;top:35.49px" class="cls_002"><textarea id="textarea2">{{character.char_name}}</textarea></div>
+<div style="position:absolute;left:275.80px;top:34.28px" class="cls_002"><span class="cls_002"><i>{{character.char_ancestry}}</i></span></div>
+<div style="position:absolute;left:367.80px;top:32.28px" class="cls_002"><span class="cls_002"><i>{{character.char_level}}</i></span></div>
+<div style="position:absolute;left:18.58px;top:76.10px" class="cls_002">
+<textarea id="textarea1">
+{{character.char_age}} {{character.char_background}} {{character.char_appearence}}
+{{character.char_build}} {{character.char_form}} {{character.char_personality}} You are {{character.char_pos_personality_trait_a}},
+{{character.char_pos_personality_trait_b}}, and {{character.char_neg_personality_trait}}.
+Wealth: {{character.char_wealth}} {% if character.char_ancestry == "Human" %}{{character.char_religion}}{% elif character.char_ancestry == "Clockwork" %}{{character.char_form}} {{character.char_purpose}}{% elif character.char_ancestry == "Dwarf" %}{{character.char_hatred}}{% elif character.char_ancestry == "Goblin" %}{{character.char_odd_habit}}{% endif %}
+</textarea></span></div>
+<div style="position:absolute;left:14.74px;top:212.04px" class="cls_002"><span class="cls_002">Talents</span></div>
+<div style="position:absolute;left:565.13px;top:212.04px" class="cls_002"><span class="cls_002">Magic</span></div>
+<div style="position:absolute;left:226.47px;top:285.25px" class="cls_005"><span class="cls_008"><i>{{character.char_strength}}</i></span></div>
+<div style="position:absolute;left:152.43px;top:334.00px" class="cls_006"><span class="cls_006">e</span></div>
+<div style="position:absolute;left:301.68px;top:493.38px" class="cls_004"><span class="cls_004">a</span></div>
+<div style="position:absolute;left:19.38px;top:629.53px" class="cls_002"><span class="cls_002">Weapons</span></div>
+<div style="position:absolute;left:161.76px;top:629.44px" class="cls_002"><span class="cls_002">Equipment</span></div>
+</div>
+</body></html>

@@ -26,4 +26,7 @@ character.generate_extra_info(character, True)
 # to-dos
 # add seed database generator
 # add pdf cheet generator
-# add descriptions
+# add ancestry descriptions
+# configure view for changeling
+# remove the generated positive trait a from the list when generate the...
+# ...positive trait b

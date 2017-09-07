@@ -26,7 +26,9 @@ class Clockwork(Character):
         char.generate_info("form", Roll.a_dice("3d6"))
         char.generate_info("appearence", Roll.a_dice("3d6"))
         char.generate_info("purpose", Roll.a_dice("1d20"))
+        char.generate_info("age", Roll.a_dice("3d6"))
         if print_extra_info:
             print("Form: " + char.char_form)
             print("Appearence: " + char.char_appearence)
             print("Purpose: " + char.char_purpose)
+            print("Age: " + char.char_age)
